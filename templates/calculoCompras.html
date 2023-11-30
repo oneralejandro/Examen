@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculo de Compras</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/calculoCompras.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculo de Compras</h1>
+        <form action="/calculoCompras" method="POST">
+            <h2>Ingresa tu nombre</h2>
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+
+
+            <h2>Ingresa tu edad</h2>
+            <label for="edad"></label>
+            <input type="text" id="edad" name="edad" required>
+            <br>
+
+            <h2>Ingresa la cantidad de tarros de pintura a comprar</h2>
+            <label for="cantidadTarros"></label>
+            <input type="text" id="cantidadTarros" name="cantidadTarros" required>
+            <br>
+
+
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if resultado %}
+        {% if res %}
+        {%if resSinDesco %}
+        {%if resTotal %}
+        <div>
+
+         <p> Nombre del Cliente : {{resultado}}   </p>
+            <p>  Total sin descuento :  {{resSinDesco}}   </p>
+        <p>  El descuento es :  {{res}}   </p>
+            <p>  El total a pagar  es :  {{resTotal}}   </p>
+
+
+    </div>
+    {% endif %}
+    {% endif %}
+        {%endif %}
+        {%endif %}
+</body>
+</html>
